@@ -33,27 +33,36 @@ wish(to: p)
 
 //
 ////协议扩展
-//protocol TextRepresentable{
-//    var desc: String{get}
-//}
-//
-//extension Person: TextRepresentable{
-//    var desc: String{
-//        return "name \(name) age \(age)"
-//    }
-//}
-//
-//print(p.desc)
-//
-//extension Array: TextRepresentable where Element: TextRepresentable{
-//    var desc: String{
-//        let itemDesc = self.map{$0.desc}
-//        return itemDesc.joined(separator: ",")
-//    }
-//}
-//
-//
-//let array = [Person(name: "Zhangsan", age: 43),Person(name: "lisi", age: 67)]
-//print(array.desc)
+protocol TextRepresentable{
+    var desc: String{get}
+}
+
+extension Person: TextRepresentable{
+    var desc: String{
+        return "name \(name) age \(age)"
+    }
+}
+
+print(p.desc)
+
+extension Array: TextRepresentable where Element: TextRepresentable{
+    var desc: String{
+        let itemDesc = self.map{$0.desc}
+        return itemDesc.joined(separator: ",")
+    }
+}
+
+extension Collection where Iterator.Element: TextRepresentable{
+    var desc1: String{
+        let itemDesc = self.map{$0.desc}
+        return itemDesc.joined(separator: ",")
+    }
+}
+
+
+let array = [Person(name: "Zhangsan", age: 43),Person(name: "lisi", age: 67)]
+print(array.desc,array.desc1)
+
+
 
 //: [Next](@next)
