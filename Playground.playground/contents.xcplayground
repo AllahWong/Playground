@@ -8,5 +8,9 @@
         <page name='FunctionsAndClosures'/>
         <page name='MyLiveView'/>
         <page name='SwiftUI'/>
+        <page name='Mixxing'/>
+        <page name='ObjectOrientedProgramming'/>
+        <page name='ObjectOrientedPrograming2'/>
+        <page name='Protocol'/>
     </pages>
 </playground>
