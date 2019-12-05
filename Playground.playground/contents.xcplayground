@@ -12,5 +12,7 @@
         <page name='ObjectOrientedProgramming'/>
         <page name='ObjectOrientedPrograming2'/>
         <page name='Protocol'/>
+        <page name='Pattern'/>
+        <page name='MultiThread'/>
     </pages>
 </playground>

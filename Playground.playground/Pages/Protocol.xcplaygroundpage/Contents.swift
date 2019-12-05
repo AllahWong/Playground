@@ -3,8 +3,6 @@
 import Foundation
 
 var str = "Hello, playground"
-///********************************************协议************************************************/
-
 
 protocol Named{
     var name: String{get}
@@ -62,7 +60,5 @@ extension Collection where Iterator.Element: TextRepresentable{
 
 let array = [Person(name: "Zhangsan", age: 43),Person(name: "lisi", age: 67)]
 print(array.desc,array.desc1)
-
-
 
 //: [Next](@next)
